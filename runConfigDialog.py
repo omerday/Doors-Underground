@@ -7,7 +7,7 @@ from psychopy import gui
 # Used in the Params section in the main file.
 ###############################
 
-def userInputPlay():
+def user_input_play():
     userInput = gui.Dlg(title="DOORS Task Information")
     userInput.addField('Subject Number:', )
     # userInput.addField('Session:', 1)

@@ -2,10 +2,11 @@ from psychopy import visual, core, event
 import helpers
 import runConfigDialog
 import pyautogui
-from instructionsScreen import showInstructions
+from instructionsScreen import show_instructions
+import LoggerSetup
 
-
-configDialogBank = runConfigDialog.userInputPlay()
+log = LoggerSetup.set_up_logger()
+configDialogBank = runConfigDialog.user_input_play()
 
 params = {
     'subjectID': configDialogBank[0],
@@ -26,8 +27,11 @@ img = visual.ImageStim(win=win, image="./img/ITI_fixation.jpg", units="pix", opa
                        size=(params['screenSize'][0], params['screenSize'][1]))
 img.draw()
 win.update()
-helpers.waitForSpace(win)
-showInstructions(win, img, params)
+helpers.wait_for_space(win)
+
+print(helpers.display_vas(win, params, "How excited are you??", ["טעמ", "הברה"]))
+
+show_instructions(win, img, params)
 
 # Initialize DataFrame
 
