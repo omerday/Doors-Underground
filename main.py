@@ -28,4 +28,23 @@ img.draw()
 win.update()
 helpers.waitForSpace(win)
 showInstructions(win, img, params)
-# core.wait(5)
+
+# Initialize DataFrame
+
+# Initialize Sensors
+
+# Run VAS
+
+# Show Instructions
+
+# Practice run
+
+# Task 1
+
+# Mid-VAS
+
+# Task 2
+
+# Final VAS
+
+# Recap
