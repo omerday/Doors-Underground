@@ -1,6 +1,7 @@
 from psychopy import visual, core, event
 import helpers
 import runConfigDialog
+import pyautogui
 
 configDialogBank = runConfigDialog.userInputPlay()
 
@@ -12,7 +13,7 @@ params = {
     'startingDistance': configDialogBank[4],  # Decide whether the starting distance is random, or fixed on 50
     'fullScreen': configDialogBank[5],
     'joystickSensitivity': configDialogBank[6],
-    'screenSize': (1024, 768),
+    'screenSize': pyautogui.size() if configDialogBank[5] is True else (1024, 768),  # Get Screen Resolution to match Full Screen
     # 'portAddress': int("0xE050", 16)
 }
 
