@@ -2,6 +2,8 @@ from psychopy import visual, core, event
 import helpers
 import runConfigDialog
 import pyautogui
+from instructionsScreen import showInstructions
+
 
 configDialogBank = runConfigDialog.userInputPlay()
 
@@ -12,7 +14,8 @@ params = {
     'numOfScreensTask2': configDialogBank[3],  # Number of Screens in the 2nd task, either 49 (7*7) or 36 (6*6)
     'startingDistance': configDialogBank[4],  # Decide whether the starting distance is random, or fixed on 50
     'fullScreen': configDialogBank[5],
-    'joystickSensitivity': configDialogBank[6],
+    'keyboardMode': configDialogBank[6],
+    'joystickSensitivity': configDialogBank[7],
     'screenSize': pyautogui.size() if configDialogBank[5] is True else (1024, 768),  # Get Screen Resolution to match Full Screen
     # 'portAddress': int("0xE050", 16)
 }
@@ -23,5 +26,6 @@ img = visual.ImageStim(win=win, image="./img/ITI_fixation.jpg", units="pix", opa
                        size=(params['screenSize'][0], params['screenSize'][1]))
 img.draw()
 win.update()
-helpers.waitForSpace()
+helpers.waitForSpace(win)
+showInstructions(win, img, params)
 # core.wait(5)
