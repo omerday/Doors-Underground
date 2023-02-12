@@ -15,7 +15,7 @@ def userInputPlay():
     userInput.addField('# of Practice Trials:', 5)
     userInput.addField('# of TaskRun1:', choices=[36, 49])
     userInput.addField('# of TaskRun2:', choices=[36, 49])
-    userInput.addFiels('Starting Distance', choices=[50, 'Random'])
+    userInput.addField('Starting Distance', choices=[50, 'Random'])
     # userInput.addField('# of TaskRun3:', 49)
     # userInput.addField('Trigger Support:', True)
     # userInput.addField('Eyetracker Support:', False)
