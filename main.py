@@ -38,6 +38,7 @@ helpers.wait_for_space(win)
 # Show Instructions
 show_instructions(win, img, params)
 
+
 # Practice run
 
 # Task 1
