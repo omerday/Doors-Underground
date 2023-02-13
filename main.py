@@ -29,10 +29,6 @@ img.draw()
 win.update()
 helpers.wait_for_space(win)
 
-print(helpers.display_vas(win, params, "How excited are you??", ["טעמ", "הברה"]))
-
-show_instructions(win, img, params)
-
 # Initialize DataFrame
 
 # Initialize Sensors
@@ -40,6 +36,7 @@ show_instructions(win, img, params)
 # Run VAS
 
 # Show Instructions
+show_instructions(win, img, params)
 
 # Practice run
 
